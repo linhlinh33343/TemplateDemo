@@ -1,15 +1,41 @@
 <template>
-  <div id="app">
+  <div>
+    <HelloWorldVue></HelloWorldVue>
+    <!-- <Home></Home> -->
+    <!-- <Sevices></Sevices> -->
+    <AboutUs></AboutUs>
+    <Footer></Footer>
+  </div>
+  <!-- <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
-  </div>
+  </div> -->
 </template>
+<script>
+import HelloWorldVue from "./components/HelloWorld.vue";
+import Footer from "./components/Footer.vue";
+import Home from "./components/Home.vue";
+import Sevices from "./components/Sevices.vue";
+import AboutUs from "./components/AboutUs.vue";
+export default {
+  components: {
+    HelloWorldVue,
+    Footer,
+    Home,
+    Sevices,
+    AboutUs,
+  },
+  data() {
+    return {};
+  },
+};
+</script>
 
 <style>
-#app {
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,5 +54,13 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
 }
 </style>
