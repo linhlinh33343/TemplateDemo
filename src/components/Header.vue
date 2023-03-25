@@ -158,6 +158,9 @@ a {
 }
 .slogan-heading{
   display: none;}
+  .icon-menu{
+    display: none;
+  }
 @media screen and (max-width : 769px){
 .icon-logo {
   display:none
@@ -185,6 +188,7 @@ a {
 }
 .icon-menu
   {
+    display: block;
     color: white;
     margin-right: 16px;
     font-size: 30px;

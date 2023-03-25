@@ -1,6 +1,6 @@
 <template>
   <div class="feature-section">
-    <div class="feature-block">
+     <div class="feature-block feature-block-pc">
       <div class="feature-content">
         <div class="content-heading">
           The newest business analytics platform
@@ -17,7 +17,7 @@
         <img :src="features01" alt="" />
       </div>
     </div>
-    <div class="feature-block">
+    <div class="feature-block feature-block-pc">
       <div class="feature-img">
         <img :src="features01" alt="" />
       </div>
@@ -33,6 +33,44 @@
         </div>
         <button class="btn-watch">Watch the demo</button>
       </div>
+    </div> 
+    <div class="feature-block feature-block-mobile ">
+      <div class="feature-content">
+        <div class="feature-img">
+          <img :src="features01" alt="" />
+        </div>
+        <div class="content-heading">
+          The newest business analytics platform
+        </div>
+        <div class="content-param">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo.
+        </div>
+        
+      </div>
+      
+      <button class="btn-watch">Discover more</button>
+    </div>
+    <div class="feature-block feature-block-mobile ">
+      <div class="feature-content">
+        <div class="feature-img">
+          <img :src="features01" alt="" />
+        </div>
+        <div class="content-heading">
+          The newest business analytics platform
+        </div>
+        <div class="content-param">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo.
+        </div>
+        
+      </div>
+      
+      <button class="btn-watch">Discover more</button>
     </div>
     <div class="ensome-block">
       <div class="content-heading">Ensome in numbers</div>
@@ -60,23 +98,24 @@
         <img :src="ensome" alt="" />
       </div>
       <div class="feature-content-2">
-        <div class="content-heading-1">The benefits of Ensome</div>
+        <div class="content-heading-1"> The benefits of Ensome</div>
         <div class="ensome-content">
-          <div class="ensome-heading">Machine learning</div>
+          <div class="ensome-heading"><img :src="brainMobile" alt="" class="brainMobile"> <img :src="brain" alt="" class="brain">Machine learning</div>
           <div class="ensome-params">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui
             blanditiis praesentium voluptatum deleniti atque corrupti quos
             dolores. Totam rem aperiam, eaque ipsa quae ab illo inventore
             veritatis et quasi architecto.
           </div>
-          <div class="ensome-heading">Machine learning</div>
+          
+          <div class="ensome-heading"><img :src="brainMobile" alt="" class="brainMobile"> <img :src="brain" alt="" class="brain">Machine learning</div>
           <div class="ensome-params">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui
             blanditiis praesentium voluptatum deleniti atque corrupti quos
             dolores. Totam rem aperiam, eaque ipsa quae ab illo inventore
             veritatis et quasi architecto.
           </div>
-          <div class="ensome-heading">Machine learning</div>
+          <div class="ensome-heading"><img :src="brainMobile" alt="" class="brainMobile"> <img :src="brain" alt="" class="brain">Machine learning</div>
           <div class="ensome-params">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui
             blanditiis praesentium voluptatum deleniti atque corrupti quos
@@ -86,7 +125,7 @@
         </div>
       </div>
     </div>
-    <div class="customer-say">
+     <div class="customer-say">
       <div class="feature-block-2">
         <div class="pricing-top">
           <h1>What our customers say</h1>
@@ -134,7 +173,7 @@
         </div>
       </div>
     </div>
-    <div class="pricing blog">
+   <div class="pricing blog">
       <div class="pricing-top">
         <h1 class="pricing-top-heading">Ensome blog</h1>
       </div>
@@ -155,7 +194,13 @@
     </div>
     <div class="pricing">
       <div class="sub-logo">
-        <img :src="logo1" alt="" v-for="item in 6" :key="item" />
+        <div class="sub-logo-img  sub-logo-img-pc" v-for="item in 6" :key="item">
+           <img :src="logo1" alt=""  />
+        </div>
+        <div class="sub-logo-img sub-logo-img-mobile" v-for="item in 4" :key="item">
+           <img :src="logo1" alt=""  />
+        </div>
+       
       </div>
     </div>
     <div class="pricing blog contact-information">
@@ -170,6 +215,7 @@
         <p class="sub-title">+1 601-201-5580</p>
         <p class="sub-title">1642 Washington Ave, Jackson, MS</p>
       </div>
+      <button class="btn-watch btn-learn-more ">Contact us</button>
       <div class="contact-information-right">
         <div class="contact1">
           <div class="contact-items">
@@ -206,7 +252,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> 
   </div>
 </template>
 
@@ -218,7 +264,8 @@ import vector1 from "../assets/vector1.png";
 import vector from "../assets/vector.png";
 import blog from "../assets/blog.png";
 import logo1 from "../assets/logo1.png";
-
+import brainMobile from '../assets/brainMobile.png';
+import brain from '../assets/brain.png';
 export default {
   data() {
     return {
@@ -229,6 +276,8 @@ export default {
       vector1,
       blog,
       logo1,
+      brainMobile,
+      brain
     };
   },
 };
@@ -421,8 +470,7 @@ p.params {
 .pricing-btn {
   padding: 10px 14px;
   gap: 10px;
-  width: 280px;
-  height: 44px;
+  width: 100%;
   border: 1px solid #185cff;
   border-radius: 6px;
   background: white;
@@ -523,4 +571,261 @@ a.blog-link {
   margin-top: 45px;
   width: unset;
 }
+.brainMobile{
+  display: none;
+}
+.brain{
+  display: inline-block;
+  margin-right: 10px;
+}
+.ensome-heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.feature-img {
+    width: 50%;
+}
+.feature-img img{
+  width: 100%;
+}
+.btn-learn-more{
+  display: none;
+}
+.feature-block-mobile{
+  display: none;
+}
+.sub-logo-img{
+  width:calc(100% / 6)
+}
+.sub-logo-img img{
+  width: 100%;
+}
+.pricing{
+  padding: 57px 0;
+}
+.sub-logo-img-pc{
+  display: inline-block;
+}
+  
+.sub-logo-img-mobile{
+  display: none;
+}
+@media screen and (max-width : 769px){
+.feature-section{
+  padding: 20px 16px;
+}
+.ensome-block{
+    width: unset;
+    margin: unset;
+    margin-top: 120px;
+}
+.content-heading{
+    font-size: 38px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 30px;
+    width: unset;
+    font-weight: 800;
+    font-size: 30px;
+}
+.ensome {
+    display: flex;
+    align-items: unset;
+    justify-content: unset;
+    flex-wrap: wrap;
+}
+.ensome-items {
+    width: 50%;
+}
+.ensome-title{
+    font-size: 14px;
+    font-weight: 600;
+    color: #9497a1;
+    width: unset;
+    font-weight: 400;
+    font-size: 14px;
+}
+.ensome-number {
+    
+    color: #185cff;
+    font-weight: 400;
+    font-size: 55px;
+}
+.feature-img img{
+  width: 100%;
+}
+.feature-block-1 {
+    width: unset;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+    flex-direction: column;
+}
+.content-heading-1 {
+    font-size: 30px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 30px;
+}
+.feature-content-2 {
+    width: unset;
+    padding: unset;
+    margin-top: 10px;
+}
+.ensome-params {
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+.brainMobile{
+  display: inline-block;
+  margin-right: 5px;
+}
+.brain{
+  display: none;
+ 
+}
+.feature-img {
+    width: unset;
+}
+.customer-say {
+    background: #f0f9ff;
+    padding: 10px 0;
+    margin-top: unset;
+    margin: 23px -16px;
+}
+.feature-block-2 {
+    width: unset;
+    margin: auto;
+    padding: 16px;
+}
+.pricing-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+}
+.customer-action {
+    text-align: start;
+}
+.btn-customer {
+  margin: 10px 10px 30px 0;
+}
+.pricing-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.customer-content {
+    background: white;
+    padding: 15px;
+    width: unset;
+    margin-bottom: 19px;
+}
+.pricing {
+    width: unset;
+    margin: auto;
+    padding: 30px 0;
+}
+.pricing-bottom-items {
+    width: unset;
+    box-shadow: 0px 4px 12px rgb(12 68 204 / 10%);
+    border-radius: 6px;
+    padding: 50px 35px;
+    width: 100%;
+}
+.btn-customer {
+    margin: 10px 10px 18px 0;
+}
+.sub-logo{
+  overflow: hidden;
+}
+.sub-logo img{
+  width: 20%;
+}
+.pricing {
+    width: unset;
+    margin: auto;
+    padding: 10px 0;
+}
+.contact-information {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+   
+    flex-direction: column;
+}
+.contact-information-left {
+    width: unset;
+}
+.contact-information-right {
+    
+    display: none;
+}
+.pricing-bottom-items.blog-items{
+  width: unset;
+}
+.btn-learn-more{    
+  display: block;
+  margin-top: unset;
+  width: 100%;
+    
+  }
+
+.feature-block-pc{
+  display: none;
+}
+.feature-content[data-v-8dc7cce2] {
+    width: unset;
+    padding:unset;
+}
+.feature-block[data-v-8dc7cce2] {
+     width: unset; 
+    display: flex;
+    align-items: flex-start;
+    margin: auto;
+    margin-top: 15px;
+    flex-direction: column;
+}
+.btn-watch[data-v-8dc7cce2] {
+    
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px 46px;
+    width: 100%;
+}
+.content-heading[data-v-8dc7cce2] {
+   margin-bottom: 20px;
+    margin-top: 30px;
+}
+.feature-block-mobile{
+  display: block;
+}
+.feature-block.feature-block-pc{
+  display: none;
+}
+.sub-logo-img{
+  width:25%
+}
+.sub-logo-img-pc{
+  display: none;
+}
+  
+.sub-logo-img-mobile{
+  display: inline-block;
+}
+}
+
 </style>

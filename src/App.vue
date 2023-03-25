@@ -1,9 +1,9 @@
 <template>
   <div>
-    <!-- <Header></Header> -->
+    <Header></Header>
     <!-- <Home></Home> -->
     <!-- <Sevices></Sevices> -->
-    <!-- <AboutUs></AboutUs> -->
+    <AboutUs></AboutUs>
     <Footer></Footer>
   </div>
   <!-- <div id="app">

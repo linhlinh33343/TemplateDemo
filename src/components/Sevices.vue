@@ -49,6 +49,7 @@
         <p class="sub-title">+1 601-201-5580</p>
         <p class="sub-title">1642 Washington Ave, Jackson, MS</p>
       </div>
+      <button class="btn-watch btn-learn-more ">Contact us</button>
       <div class="contact-information-right">
         <div class="contact1">
           <div class="contact-items">
@@ -84,7 +85,6 @@
             </div>
           </div>
         </div>
-        <button class="btn-watch">Send</button>
       </div>
     </div>
   </div>
@@ -412,4 +412,207 @@ a.blog-link {
   font-size: 16px;
   color: #9497a1;
 }
+@media screen and (max-width : 769px){
+.feature-section{
+  padding: 20px 16px;
+}
+.ensome-block{
+    width: unset;
+    margin: unset;
+    margin-top: 120px;
+}
+.content-heading{
+    font-size: 38px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 30px;
+    width: unset;
+    font-weight: 800;
+    font-size: 30px;
+}
+.ensome {
+    display: flex;
+    align-items: unset;
+    justify-content: unset;
+    flex-wrap: wrap;
+}
+.ensome-items {
+    width: 50%;
+}
+.ensome-title{
+    font-size: 14px;
+    font-weight: 600;
+    color: #9497a1;
+    width: unset;
+    font-weight: 400;
+    font-size: 14px;
+}
+.ensome-number {
+    
+    color: #185cff;
+    font-weight: 400;
+    font-size: 55px;
+}
+.feature-img img{
+  width: 100%;
+}
+.feature-block-1 {
+    width: unset;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+    flex-direction: column;
+}
+.content-heading-1 {
+    font-size: 30px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 30px;
+}
+.feature-content-2 {
+    width: unset;
+    padding: unset;
+    margin-top: 10px;
+}
+.ensome-params {
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+.brainMobile{
+  display: inline-block;
+  margin-right: 5px;
+}
+.brain{
+  display: none;
+ 
+}
+.feature-img {
+    width: unset;
+}
+.customer-say {
+    background: #f0f9ff;
+    padding: 10px 0;
+    margin-top: unset;
+    margin: 23px -16px;
+}
+.feature-block-2 {
+    width: unset;
+    margin: auto;
+    padding: 16px;
+}
+.pricing-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+}
+.customer-action {
+    text-align: start;
+}
+.btn-customer {
+  margin: 10px 10px 30px 0;
+}
+.pricing-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.customer-content {
+    background: white;
+    padding: 15px;
+    width: unset;
+    margin-bottom: 19px;
+}
+.pricing {
+    width: unset;
+    margin: auto;
+    padding: 30px 0;
+}
+.pricing-bottom-items {
+    width: unset;
+    box-shadow: 0px 4px 12px rgb(12 68 204 / 10%);
+    border-radius: 6px;
+    padding: 50px 35px;
+    width: 100%;
+}
+.btn-customer {
+    margin: 10px 10px 18px 0;
+}
+.sub-logo{
+  overflow: hidden;
+}
+.sub-logo img{
+  width: 20%;
+}
+.pricing {
+    width: unset;
+    margin: auto;
+    padding: 10px 0;
+}
+.contact-information {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+   
+    flex-direction: column;
+}
+.contact-information-left {
+    width: unset;
+}
+.contact-information-right {
+    
+    display: none;
+}
+.pricing-bottom-items.blog-items{
+  width: unset;
+}
+.btn-learn-more{    
+  display: block;
+  margin-top: unset;
+  width: 100%;
+    
+  }
+
+.feature-block-pc{
+  display: none;
+}
+.feature-content[data-v-8dc7cce2] {
+    width: unset;
+    padding:unset;
+}
+.feature-block[data-v-8dc7cce2] {
+     width: unset; 
+    display: flex;
+    align-items: flex-start;
+    margin: auto;
+    margin-top: 15px;
+    flex-direction: column;
+}
+.btn-watch[data-v-8dc7cce2] {
+    
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px 46px;
+    width: 100%;
+}
+.content-heading[data-v-8dc7cce2] {
+   margin-bottom: 20px;
+    margin-top: 30px;
+}
+.feature-block-mobile{
+  display: block;
+}
+.feature-block.feature-block-pc{
+  display: none;
+}
+}
+
 </style>
