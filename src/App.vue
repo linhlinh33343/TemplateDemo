@@ -1,9 +1,9 @@
 <template>
   <div>
-    <HelloWorldVue></HelloWorldVue>
+    <!-- <Header></Header> -->
     <!-- <Home></Home> -->
     <!-- <Sevices></Sevices> -->
-    <AboutUs></AboutUs>
+    <!-- <AboutUs></AboutUs> -->
     <Footer></Footer>
   </div>
   <!-- <div id="app">
@@ -15,14 +15,14 @@
   </div> -->
 </template>
 <script>
-import HelloWorldVue from "./components/HelloWorld.vue";
+import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Home from "./components/Home.vue";
 import Sevices from "./components/Sevices.vue";
 import AboutUs from "./components/AboutUs.vue";
 export default {
   components: {
-    HelloWorldVue,
+    Header,
     Footer,
     Home,
     Sevices,

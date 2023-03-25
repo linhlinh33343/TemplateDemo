@@ -100,7 +100,7 @@ export default {
 }
 .subcribe-sub-heading {
   font-size: 20px;
-  width: 50%;
+  width: 62%;
   margin-top: 24px;
 }
 .subcribe-right {
@@ -195,5 +195,62 @@ export default {
   font-weight: 400;
   color: #607d94;
   margin-left: 100px;
+}
+@media screen and (max-width : 769px){
+  .subcribe {
+    width: unset;
+    margin: auto;
+    display: flex;
+    padding: 50px 16px 20px 16px;
+    flex-direction: column;
+}
+.subcribe-sub-heading {
+ 
+    display: none;
+}
+.subcribe-right{
+    display: unset;
+   
+    width: unset;
+ 
+}
+.subcribe-email {
+    border-radius: unset;
+    overflow: unset;
+    display: flex;
+    flex-direction: column;
+    margin: 35px 0px 60px 0px;
+}
+.your-email {
+    padding: 15px 0px 15px 25px;
+    background-color: #c9dcec;
+    outline: none;
+    min-width: 320px;
+    border: none;
+    margin: 0px 0px 20px 0px;
+    /* text-align: center; */
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #607D94;
+    background: #002B4E;
+    border: 1px solid #607D94;
+border-radius: 6px;
+
+
+}
+.btn-send {
+    border: none;
+    border: none;
+    outline: none;
+    padding: 15px;
+    min-width: 126px;
+    cursor: pointer;
+    background: #FFFFFF;
+    border-radius: 6px;
+    color: #002B4E;
+    font-weight: 700;
+    font-size: 16px;
+}
 }
 </style>
