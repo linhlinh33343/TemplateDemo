@@ -1,6 +1,6 @@
 <template>
   <div class="feature-section">
-    <div class="feature-block feature-block-pc">
+    <div class="feature-block ">
       <div class="feature-content">
         <div class="content-heading about-heading">
           About Ensome
@@ -32,6 +32,7 @@
        
       </div>
     </div>
+    
     <div class="customer-say">
       <div class="feature-block-2">
         <div class="pricing-top">
@@ -60,6 +61,37 @@
             </div>
            </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="pricing Our-block">
+      <div class="pricing-top">
+        <h1>Our achievements</h1>
+       
+      </div>
+      <div class="pricing-bottom our-advantages">
+        <div class="pricing-bottom-items  our-advantages-items" v-for="item in 4" :key="item">
+         
+          <p class="achievements-title">1830+</p>
+          <p class="achievements-heading">Project executed</p>
+        </div>
+      </div>
+    </div>
+    <div class="pricing">
+      <div class="pricing-top">
+        <h1>Our advantages</h1>
+       
+      </div>
+      <div class="pricing-bottom our-advantages">
+        <div class="pricing-bottom-items" v-for="item in 3" :key="item">
+          <img :src="brainMobile" alt="" class="brainMobile"> <img :src="brain" alt="" class="brain">
+          <p class="title">Machine learning</p>
+          <p class="sevice-params">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti quos
+            dolores.
+          </p>
+          <a href="" class="blog-link">Read more -></a>
         </div>
       </div>
     </div>
@@ -127,6 +159,7 @@ import logo1 from "../assets/logo1.png";
 import brainMobile from '../assets/brainMobile.png';
 import brain from '../assets/brain.png';
 import Ellipse from '../assets/Ellipse.png';
+import iconBrain from "../assets/iconBrain.png";
 export default {
   data() {
     return {
@@ -139,7 +172,8 @@ export default {
       logo1,
       brainMobile,
       brain,
-      Ellipse
+      Ellipse,
+      iconBrain
     };
   },
 };
@@ -547,6 +581,29 @@ a.blog-link {
     font-size: 16px;
     color: #9497A1;
 }
+.pricing-bottom.our-advantages {
+    margin: unset;
+}
+p.about-year {
+    font-weight: 700;
+    font-size: 16px;
+    color: #185CFF;
+}
+p.achievements-title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    color: #185CFF;
+    text-align: center;
+}
+p.achievements-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #9497A1;
+    margin-top: 10px;
+}
 /* dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
 @media screen and (max-width : 769px){
 .feature-section{
@@ -758,6 +815,54 @@ a.blog-link {
   
 .sub-logo-img-mobile{
   display: inline-block;
+}
+.pricing-bottom.our-advantages {
+    flex-direction: unset;
+    flex-wrap: wrap;
+}
+.pricing-bottom-items.our-advantages-items[data-v-4fd998ea] {
+    width: unset;
+    box-shadow: unset;
+    border-radius: 6px;
+    padding: unset;
+    width: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+p.achievements-heading{
+  text-align: start;
+
+}
+p.achievements-title{
+  text-align: start;
+  font-style: normal;
+font-weight: 400;
+font-size: 55px;
+}
+.pricing-bottom[data-v-4fd998ea][data-v-4fd998ea] {
+ 
+    margin-right: unset; 
+}
+.pricing-top h1 {
+    margin-bottom: 10px;
+}
+.feature-block[data-v-4fd998ea] {
+    width: unset;
+   
+    margin-top: unset;
+}
+.about-params[data-v-4fd998ea] {
+   
+    flex-direction: column;
+}
+.about-params__items[data-v-4fd998ea] {
+    width: unset;
+   
+    color: #9497A1;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
 }
 }
 

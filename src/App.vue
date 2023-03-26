@@ -3,7 +3,9 @@
     <Header></Header>
     <!-- <Home></Home> -->
     <!-- <Sevices></Sevices> -->
-    <AboutUs></AboutUs>
+    <!-- <Blog></Blog> -->
+    <OurTeam></OurTeam>
+    <!-- <AboutUs></AboutUs> -->
     <Footer></Footer>
   </div>
   <!-- <div id="app">
@@ -20,6 +22,9 @@ import Footer from "./components/Footer.vue";
 import Home from "./components/Home.vue";
 import Sevices from "./components/Sevices.vue";
 import AboutUs from "./components/AboutUs.vue";
+import Blog from "./components/Blog.vue";
+
+import OurTeam from './components/OurTeam.vue';
 export default {
   components: {
     Header,
@@ -27,6 +32,9 @@ export default {
     Home,
     Sevices,
     AboutUs,
+    Blog,
+    OurTeam
+
   },
   data() {
     return {};

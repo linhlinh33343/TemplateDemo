@@ -412,6 +412,10 @@ a.blog-link {
   font-size: 16px;
   color: #9497a1;
 }
+.btn-learn-more{
+  display: none
+}
+
 @media screen and (max-width : 769px){
 .feature-section{
   padding: 20px 16px;
