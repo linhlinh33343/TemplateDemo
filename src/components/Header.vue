@@ -19,7 +19,8 @@
           <div class="watch-video">
             <button class="btn-watch"><img :src="icon1" alt="" class="icon-img">Watch the demo</button>
           </div>
-          <i class="fa-solid fa-bars icon-menu"></i>
+          <i class="fa-solid fa-bars icon-menu" v-if="isMenu" @click="isMenu=!isMenu"></i>
+          <i class="fa-solid fa-xmark icon-menu " v-else @click="isMenu=!isMenu"></i>
         </div>
        
       </div>
@@ -46,10 +47,12 @@ import icon1 from  "../assets/icon1.png";
 
 export default {
   data() {
+    const isMenu = true;
     return {
       Logowhite,
       icon1,
-      Logo_mobile
+      Logo_mobile,
+      isMenu
     };
   },
 };

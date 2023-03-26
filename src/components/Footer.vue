@@ -19,7 +19,7 @@
     </div>
     <div class="footer-bottom">
       <div class="footer-bottom-blocks">
-        <div class="footer-block">
+        <div class="footer-block footer-block-pc">
           <div class="block1">
             <div class="block1-logo">
               <img :src="Logowhite" alt="" />
@@ -58,6 +58,14 @@
             </div>
           </div>
         </div>
+        <div class="footer-block-mobile">
+            <div v-for="itemFooter in footerBlockMobile" :key="itemFooter" class="menuList" @click="isChildrenMethod(itemFooter.id)">
+                <div class="menuItem"><span>{{ itemFooter.title }}</span><i class="fa-solid fa-chevron-down"></i></div>
+                <div v-if="itemFooter.children&&itemFooter.openMenu===true" >
+                  <div class="item" v-for="item in itemFooter.children" :key="item">{{item.title}} <i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
         <div class="footer-block-us">
           <div class="block-trademark">Ensome© 2022 All Rights Reserved</div>
           <div class="block-action">
@@ -72,12 +80,98 @@
 
 <script>
 import Logowhite from "../assets/Logo_white.svg";
+import vector1 from "../assets/vector1.png"
 export default {
   data() {
+    const isChildren=false;
+    const footerBlockMobile=[
+      {
+        id:1,
+        title:"Quick link",
+        openMenu: false,
+        children:[
+          {
+            title:"Home"
+          },
+          {
+            title:"Solutions"
+          },
+
+        ]
+
+      },
+      {
+        id:2,
+        title:"Service",
+        openMenu: false,
+        children:[
+          {
+            title:"Home"
+          },
+          {
+            title:"Solutions"
+          },
+
+        ]
+
+      },{
+        id:3,
+        title:"Cantact info",
+        openMenu: false,
+        children:[
+          {
+            title:"Home"
+          },
+          {
+            title:"Solutions"
+          },
+
+        ]
+
+      },
+      {
+        id:4,
+        title:"Follow us",
+        openMenu: false,
+        children:[
+          {
+            title:"Home"
+          },
+          {
+            title:"Solutions"
+          },
+
+        ]
+
+      }
+
+    ]
     return {
+      footerBlockMobile,
       Logowhite,
+      isChildren,
+      vector1
     };
   },
+ 
+   
+  methods:{
+    isChildrenMethod(id){
+      this.footerBlockMobile.forEach((el)=>{
+        if(el.id===id){
+          if(el.openMenu===true){
+             el.openMenu=false;
+          }else{
+            el.openMenu=true;
+          }
+         
+        }else{
+          el.openMenu=false;
+        }
+      })
+     
+    }
+  }
 };
 </script>
 
@@ -196,7 +290,13 @@ export default {
   color: #607d94;
   margin-left: 100px;
 }
+.footer-block-mobile{
+  display: none;
+}
 @media screen and (max-width : 769px){
+  .footer-block-mobile{
+  display: block;
+}
   .subcribe {
     width: unset;
     margin: auto;
@@ -235,7 +335,7 @@ export default {
     color: #607D94;
     background: #002B4E;
     border: 1px solid #607D94;
-border-radius: 6px;
+    border-radius: 6px;
 
 
 }
@@ -251,6 +351,74 @@ border-radius: 6px;
     color: #002B4E;
     font-weight: 700;
     font-size: 16px;
+}
+.footer-block-pc{
+  display: none;
+}
+.footer-bottom-blocks {
+    width: unset;
+    margin: auto;
+    color: white;
+    padding: 0px 16px;
+}
+.footer-bottom {
+    background-color: #002b4e;
+    padding: unset;
+}
+.menuList{
+   border-bottom: 1px solid #607D94;
+}
+.menuItem {
+    display: flex;
+    justify-content: space-between;
+   
+    padding: 10px 0px;
+}
+.item {
+    padding: 10px 28px;
+}
+.footer-block-us {
+    border-top: 1px solid #607d94;
+    display: flex;
+    align-items: center;
+    padding: unset;
+    flex-direction: column-reverse;
+}
+.block-action {
+    width: unset;
+    text-align: unset;
+    display: flex;
+    justify-content: space-between;
+}
+.block-action {
+    width: unset;
+    text-align: unset;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 15px 0px;
+    border-bottom: 1px solid #607D94;
+}
+.block-action span {
+    width: unset;
+    font-size: 14px;
+    font-weight: 400;
+    color: #607d94;
+    margin-left: unset;
+    margin-right: 30px;
+}
+.block-trademark {
+    width: unset;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 0px;
+    color: #607d94;
+    width: 100%;
+}
+.subcribe-heading[data-v-40ab164b] {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
 }
 }
 </style>
