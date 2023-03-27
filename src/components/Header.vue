@@ -32,12 +32,12 @@
             </li>
             <li>
               <a href="">
-                <router-link :to="{ name: 'Blog' }">Blog</router-link></a
+                <router-link :to="{ name: 'Blogs' }">Blog</router-link></a
               >
             </li>
             <li>
               <a href="">
-                <router-link :to="{ name: 'Home' }">Contact</router-link></a
+                <router-link :to="{ name: 'contact' }">Contact</router-link></a
               >
             </li>
           </div>
