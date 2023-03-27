@@ -32,7 +32,7 @@
             </li>
             <li>
               <a href="">
-                <router-link :to="{ name: 'Blogs' }">Blog</router-link></a
+                <router-link :to="{ name: 'Blog' }">Blog</router-link></a
               >
             </li>
             <li>
