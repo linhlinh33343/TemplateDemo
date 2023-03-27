@@ -5,37 +5,79 @@
         <div class="header">
           <div class="logo">
             <img :src="Logowhite" alt="" class="icon-logo" />
-            <img :src="Logo_mobile" alt="" class="icon-logo-mobile">
-            
+            <img :src="Logo_mobile" alt="" class="icon-logo-mobile" />
           </div>
           <div class="menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">Solutions</a></li>
-            <li><a href="">Pages</a></li>
-            <li><a href="">Elements</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Contact</a></li>
+            <li>
+              <a href="">
+                <router-link :to="{ name: 'Home' }">Home</router-link></a
+              >
+            </li>
+            <li>
+              <a href="">
+                <router-link :to="{ name: 'slutions' }"
+                  >Solutions</router-link
+                ></a
+              >
+            </li>
+            <li>
+              <a href="">
+                <router-link :to="{ name: 'Home' }">Pages</router-link></a
+              >
+            </li>
+            <li>
+              <a href="">
+                <router-link :to="{ name: 'Home' }">Elements</router-link></a
+              >
+            </li>
+            <li>
+              <a href="">
+                <router-link :to="{ name: 'Blog' }">Blog</router-link></a
+              >
+            </li>
+            <li>
+              <a href="">
+                <router-link :to="{ name: 'Home' }">Contact</router-link></a
+              >
+            </li>
           </div>
           <div class="watch-video">
-            <button class="btn-watch"><img :src="icon1" alt="" class="icon-img">Watch the demo</button>
+            <button class="btn-watch">
+              <img :src="icon1" alt="" class="icon-img" />Watch the demo
+            </button>
           </div>
-          <i class="fa-solid fa-bars icon-menu" v-if="isMenu" @click="isMenu=!isMenu"></i>
-          <i class="fa-solid fa-xmark icon-menu " v-else @click="isMenu=!isMenu"></i>
+          <i
+            class="fa-solid fa-bars icon-menu"
+            v-if="isMenu"
+            @click="isMenu = !isMenu"
+          ></i>
+          <i
+            class="fa-solid fa-xmark icon-menu"
+            v-else
+            @click="isMenu = !isMenu"
+          ></i>
         </div>
-       
       </div>
       <div class="slider-block">
         <div class="slider">
           <div class="slogan">Find true power in your data with Ensome</div>
-          <div class="slogan-heading">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+          <div class="slogan-heading">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </div>
 
           <div class="menu-active">
-            <button class="btn-watch btn-learn-more ">Learn more</button>
-            <button class="btn-watch btn-watch-transparent"><i class="fa-regular fa-circle-play btn-icon"></i>Watch the demo</button>
+            <button class="btn-watch btn-learn-more">Learn more</button>
+            <button class="btn-watch btn-watch-transparent">
+              <i class="fa-regular fa-circle-play btn-icon"></i>Watch the demo
+            </button>
           </div>
         </div>
       </div>
     </div>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -43,7 +85,7 @@
 // import logo from "../assets/logo.png";
 import Logowhite from "../assets/Logo_white.svg";
 import Logo_mobile from "../assets/Logo_mobile.png";
-import icon1 from  "../assets/icon1.png";
+import icon1 from "../assets/icon1.png";
 
 export default {
   data() {
@@ -52,7 +94,7 @@ export default {
       Logowhite,
       icon1,
       Logo_mobile,
-      isMenu
+      isMenu,
     };
   },
 };
@@ -100,21 +142,21 @@ a {
   display: flex;
   align-items: center;
 }
-.btn-watch-transparent{
+.btn-watch-transparent {
   background: transparent;
-    color: white;
-    border: transparent;
-    transform: translateY(5px);
+  color: white;
+  border: transparent;
+  transform: translateY(5px);
 }
-.icon-img-transparent{
+.icon-img-transparent {
   background-color: #002b4e;
   color: transparent;
 }
-.btn-icon{
+.btn-icon {
   font-size: 24px;
   margin-right: 4px;
 }
-.icon-img{
+.icon-img {
   margin-right: 4px;
 }
 .slider-block {
@@ -149,67 +191,63 @@ a {
   width: 60%;
   margin: auto;
 }
-.icon-logo-mobile{
+.icon-logo-mobile {
   display: none;
 }
 .icon-logo {
-  display:block;
-}
-.btn-learn-more{
- 
-  color: #002B4E;
-}
-.slogan-heading{
-  display: none;}
-  .icon-menu{
-    display: none;
-  }
-@media screen and (max-width : 769px){
-.icon-logo {
-  display:none
-}
-.icon-logo-mobile{
   display: block;
 }
-.header[data-v-61dd7a3d] {
+.btn-learn-more {
+  color: #002b4e;
+}
+.slogan-heading {
+  display: none;
+}
+.icon-menu {
+  display: none;
+}
+@media screen and (max-width: 769px) {
+  .icon-logo {
+    display: none;
+  }
+  .icon-logo-mobile {
+    display: block;
+  }
+  .header[data-v-61dd7a3d] {
     padding: unset;
     width: unset;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
-}
-.header .menu{
-  display: none;
-
-}
-.watch-video {
+  }
+  .header .menu {
     display: none;
-}
-.logo{
-  padding: 20px 16px;
-}
-.icon-menu
-  {
+  }
+  .watch-video {
+    display: none;
+  }
+  .logo {
+    padding: 20px 16px;
+  }
+  .icon-menu {
     display: block;
     color: white;
     margin-right: 16px;
     font-size: 30px;
-
-}
-.slider-block {
-   
+  }
+  .slider-block {
     padding: unset;
-}
-.slider {
+  }
+  .slider {
     display: flex;
     justify-content: space-around;
     width: unset;
     margin: auto;
     flex-direction: column;
     padding: 20px 16px;
-}
-.slogan {
+  }
+  .slogan {
     font-size: 46px;
     color: white;
     /* font-weight: 800; */
@@ -218,8 +256,8 @@ a {
     font-weight: 800;
     font-size: 30px;
     line-height: 40px;
-}
-.menu-active[data-v-61dd7a3d] {
+  }
+  .menu-active[data-v-61dd7a3d] {
     width: unset;
     display: flex;
     align-items: unset;
@@ -227,29 +265,28 @@ a {
     flex-direction: column;
     /* text-align: center; */
     cursor: pointer;
-}
-.btn-watch {
+  }
+  .btn-watch {
     font-size: 16px;
     display: flex;
     justify-content: center;
-    
+
     border: 1px solid white;
     margin-top: 10px;
+  }
+  .btn-learn-more {
+    margin-right: unset;
+    padding: 13px 0px;
+    color: #002b4e;
+  }
+  .slogan-heading {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 24px;
+    margin: 15px 0px;
+  }
 }
-.btn-learn-more{
-  margin-right: unset;
-  padding: 13px 0px;
-  color: #002B4E;
-}
-.slogan-heading{
-  display: block;
-  font-style: normal;
-font-weight: 400;
-font-size: 14px;
-color: #FFFFFF;
-line-height: 24px;
-margin: 15px 0px;
-}
-}
-
 </style>

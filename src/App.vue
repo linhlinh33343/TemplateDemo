@@ -1,20 +1,8 @@
 <template>
   <div>
     <Header></Header>
-    <!-- <Home></Home> -->
-    <!-- <Sevices></Sevices> -->
-    <!-- <Blog></Blog> -->
-    <OurTeam></OurTeam>
-    <!-- <AboutUs></AboutUs> -->
     <Footer></Footer>
   </div>
-  <!-- <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div> -->
 </template>
 <script>
 import Header from "./components/Header.vue";
@@ -24,7 +12,7 @@ import Sevices from "./components/Sevices.vue";
 import AboutUs from "./components/AboutUs.vue";
 import Blog from "./components/Blog.vue";
 
-import OurTeam from './components/OurTeam.vue';
+import OurTeam from "./components/OurTeam.vue";
 export default {
   components: {
     Header,
@@ -33,8 +21,7 @@ export default {
     Sevices,
     AboutUs,
     Blog,
-    OurTeam
-
+    OurTeam,
   },
   data() {
     return {};
